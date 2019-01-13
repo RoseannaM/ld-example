@@ -7,6 +7,16 @@ import SuperBowlCountdown from './components/SuperBowlCountdown'
 import {withFlagProvider} from 'ld-react';
 import Main from './components/Main';
 
+const MainApp = styled.div`
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+`
+const Header = styled.header`
+`
 const Title = styled.h1`
   font-size: 1.5em;
   text-align: center;
@@ -16,15 +26,15 @@ const Title = styled.h1`
 class App extends Component {
   render() {
     return (
-      <Main >
-      <div className="App">
-        <header className="App-header">
-          <SuperBowlCountdown/>
-          <Title>
-            <Banner/>
-          </Title>
-        </header>
-      </div>
+      <Main>
+        <MainApp>
+          <Header className="App-header">
+            <SuperBowlCountdown/>
+            <Title>
+              <Banner/>
+            </Title>
+          </Header>
+        </MainApp>
       </Main>
     );
   }

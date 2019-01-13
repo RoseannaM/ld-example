@@ -4,7 +4,8 @@ import {withFlags} from 'ld-react';
 import backGroundImage from '../images/nfl-football-field.jpg';
 
 const Mainbackground = styled.div`
-  background: linear-gradient(rgba(0, 16, 81, 0.6509803921568628),rgba(0, 36, 90, 0) ),
+  font-family: 'Staatliches', cursive;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 23%, rgba(0, 0, 0, 0.7215686274509804)),
   url(${backGroundImage});
   background-size: cover;
   background-position: right 35% bottom 45%;
