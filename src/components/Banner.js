@@ -64,12 +64,15 @@ const StyledIcon = styled.div`
  class Banner extends Component {
     render() {
       const winningTeam = this.props.flags.superBowlTeams;
-      if(!winningTeam){
+      
+      if(!winningTeam || winningTeam === "TBD"){
         return null
-      }
+      } 
       const icon = winnerValues[winningTeam].icon;
       const primaryColor = winnerValues[winningTeam].primary;
-      const outlineColor = darkenColor(primaryColor)
+      const outlineColor = darkenColor(primaryColor);
+      
+      console.log(outlineColor)
       return (
         this.props.flags.showCountDown ?
         <div></div>
