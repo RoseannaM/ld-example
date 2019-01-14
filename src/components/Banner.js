@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {withFlags} from 'ld-react';
-import { GiParasaurolophus, GiRoundStar, GiHangGlider, GiStumpRegrowth} from 'react-icons/gi';
+import { GiParasaurolophus, 
+  GiRoundStar, 
+  GiHangGlider, 
+  GiStumpRegrowth, 
+  GiPrayingMantis,
+  GiBurningMeteor,
+  GiThornyVine,
+  GiPeach,
+  GiCigale,
+  GiEasterEgg
+} from 'react-icons/gi';
 import { IconContext } from "react-icons";
 import convert from 'color-convert';
 
@@ -13,10 +23,16 @@ const darkenColor = (colorCode)=> {
 }
 const winnerValues = {
   'TBD' : 'Gray',
-  'New Orleans Dinosaurs': {primary:'#97233F',secondary: "pink", icon: <GiParasaurolophus/>},
-  'Kansas City Stars': {primary:'#241773',secondary: "green", icon: <GiRoundStar/>},
-  'Los Angeles Gliders': {primary:'#AD8900',secondary: "black", icon: <GiHangGlider/>},
-  'New England Stumps': {primary:'#046A38',secondary: "#69BE28", icon: <GiStumpRegrowth/>}
+  'New Orleans Dinosaurs': {primary:'#66925e',secondary: "#51bae4", icon: <GiParasaurolophus/>},
+  'Kansas City Stars': {primary:'#0425a2',secondary: "#256d75", icon: <GiRoundStar/>},
+  'Los Angeles Gliders': {primary:'#AD8900',secondary: "#241773", icon: <GiHangGlider/>},
+  'New England Stumps': {primary:'#046A38',secondary: "#69BE28", icon: <GiStumpRegrowth/>},
+  'Chicago Mantids': {primary:'#78bf1c',secondary: "#00a285", icon: <GiPrayingMantis/>},
+  'Dallas Meteors': {primary:'#bf971c',secondary: "#a20015", icon: <GiBurningMeteor/>},
+  'Indianapolis Vines': {primary:'#ad8900',secondary: "#024e10", icon: <GiThornyVine/>},
+  'Baltimore Peaches': {primary:'#e89877',secondary: "#4e2902", icon: <GiPeach/>},
+  'San Diego Cicadas': {primary:'#77e8d5',secondary: "#054e56", icon: <GiCigale/>},
+  'Philadelphia Eggs': {primary:'#e877af',secondary: "#3e005d", icon: <GiEasterEgg/>}
 }
 const Winner = styled.h1`
   margin: auto;
@@ -45,8 +61,6 @@ const StyledIcon = styled.div`
   width: auto;
   transform: translateX(-50%);
 `
-
-
  class Banner extends Component {
     render() {
       const winningTeam = this.props.flags.superBowlTeams;
